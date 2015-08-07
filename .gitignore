@@ -1,0 +1,4 @@
+public/javascripts/
+public/stylesheets
+
+# should minify + concat fontawesome, bootstrap

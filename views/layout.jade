@@ -2,6 +2,98 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='stylesheets/font-awesome.min.css')
+    link(rel='stylesheet', href='stylesheets/app.css')
+    script(src='javascripts/portfolio.js')
   body
-    block content
+
+    // Small size window
+
+    div(class="bg-wrapper small-window")
+
+      nav(class="navbar navbar-inverse navbar-fixed-top" role="navigation")
+        div(class="container")
+          div(class="navbar-header")
+            a(class="navbar-brand navbar-left #{breadcrumbBrand}" href="/") 
+              |Nickmc.co
+          span(class="navbar-right")
+            a(href="/portfolio") 
+              span(class="navbar-text #{breadcrumbPortfolio}")
+                p
+                  i(class="fa fa-envelope-square fa-lg blank") 
+                  |&nbsp;&nbsp;&nbsp;Portfolio
+            a(href="/resume") 
+              span(class="navbar-text")
+                p
+                  i(class="fa fa-envelope-square fa-lg blank appear-on-mobile") 
+                  |&nbsp;&nbsp;&nbsp;Resume
+            a(href="https://www.github.com/kenning")
+              span(class="navbar-text")
+                p
+                  i(class="fa fa-github-square fa-lg") 
+                  span(class="appear-on-mobile") &nbsp;&nbsp;&nbsp;github.com/kenning
+            a(href="https://www.linkedin.com/in/nmcco")
+              span(class="navbar-text")
+                p
+                  i(class="fa fa-linkedin-square fa-lg") 
+                  span(class="appear-on-mobile") &nbsp;&nbsp;&nbsp;linkedin.com/in/nmcco
+            a(href="mailto:hwerzog@gmail.com")
+              span(class="navbar-text ")
+                p
+                  i(class="fa fa-envelope-square fa-lg") 
+                  span(class="appear-on-mobile") &nbsp;&nbsp;&nbsp;hwerzog@gmail.com
+
+      div(class="container navbar-padding")
+        block content
+
+        footer
+          div(class="row copyright")
+            div(class="col-lg-12")
+              p Copyright &copy; Nick McCormick 2015
+
+    // Normal size window
+
+    div(style="background-image:url(#{bg});" class="bg-wrapper medium-window")
+
+      nav(class="navbar navbar-inverse navbar-fixed-top" role="navigation")
+        div(class="container")
+          div(class="navbar-header")
+            a(class="navbar-brand navbar-left" href="#") 
+              |Nickmc.co
+          span(class="navbar-right")
+            a(href="/portfolio") 
+              span(class="navbar-text #{breadcrumbPortfolio}")
+                p
+                  i(class="fa fa-envelope-square fa-lg blank") 
+                  |&nbsp;&nbsp;&nbsp;Portfolio
+            a(href="/resume") 
+              span(class="navbar-text")
+                p
+                  i(class="fa fa-envelope-square fa-lg blank appear-on-mobile") 
+                  span.appear-on-mobile &nbsp;&nbsp;&nbsp;
+                  |Resume
+            a(href="https://www.github.com/kenning")
+              span(class="navbar-text")
+                p
+                  i(class="fa fa-github-square fa-lg") 
+                  span(class="appear-on-mobile") &nbsp;&nbsp;&nbsp;github.com/kenning
+            a(href="https://www.linkedin.com/in/nmcco")
+              span(class="navbar-text")
+                p
+                  i(class="fa fa-linkedin-square fa-lg") 
+                  span(class="appear-on-mobile") &nbsp;&nbsp;&nbsp;linkedin.com/in/nmcco
+            a(href="mailto:hwerzog@gmail.com")
+              span(class="navbar-text ")
+                p
+                  i(class="fa fa-envelope-square fa-lg") 
+                  span(class="appear-on-mobile") &nbsp;&nbsp;&nbsp;hwerzog@gmail.com
+
+      div(class="container navbar-padding")
+        block content
+
+        footer
+          div(class="row copyright #{bigPicture}")
+            div(class="col-lg-12")
+              p Copyright &copy; Nick McCormick 2015
+
