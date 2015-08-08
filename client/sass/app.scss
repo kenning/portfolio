@@ -2,14 +2,22 @@ $large-width: 768px;
 $large-height: 600px;
 $very-large-width: 992px;
 
-@mixin large {
+@mixin medium {
   @media (min-width: #{$large-width}) and (min-height: #{$large-height}){
     @content;
   }
 }
 
-@mixin large-width-only{
+@mixin large-width{
   @media (min-width: #{$very-large-width}) {
+    @content;
+  }
+}
+
+@mixin medium-width-short-height {
+  @media (min-width: #{$large-width}) 
+  and (max-width:#{$very-large-width}) 
+  and (max-height: #{$large-height}) {
     @content;
   }
 }
@@ -22,17 +30,16 @@ body{
 
 footer .big-picture {
 
-  @include large {
+  @include medium {
     position:absolute!important;
     bottom:0px!important;
   }
 
-  @include large-width-only {
+  @include large-width {
     position:absolute!important;
     bottom:0px!important;
   }
 }
-
 
 /* Portfolio detail */
 
@@ -59,7 +66,7 @@ footer .big-picture {
     display:none;
   }
 
-  @include large-width-only{
+  @include large-width{
     display:none;
   }
 }
@@ -79,7 +86,7 @@ footer .big-picture {
     display:inline;
   }
 
-  @include large-width-only{
+  @include large-width{
     display:inline;
   }
 }
@@ -89,17 +96,15 @@ footer .big-picture {
 .appear-on-mobile{
   display:inline-block;
 
-  @media (min-width: #{$large-width}) 
-  and (max-width:#{$very-large-width}) 
-  and (max-height: #{$large-height}) {
+  @include medium-width-short-height {
     display:none;      
   }
 
-  @include large-width-only{
+  @include large-width{
     display:none;
   }
 
-  @include large {
+  @include medium {
     display:none;
   }
 }
@@ -109,9 +114,9 @@ footer .big-picture {
 }
 
 .navbar-padding{
-  padding-top:160px;
+  padding-top:1px;
 
-  @include large-width-only{
+  @include large-width{
     padding-top:40px;
   }
 
@@ -119,9 +124,7 @@ footer .big-picture {
     padding-top: 40px;
   }
 
-  @media (min-width: #{$large-width}) 
-  and (max-width:#{$very-large-width}) 
-  and (max-height: #{$large-height}) {
+  @include medium-width-short-height{
     padding-top: 40px;  
   }
 
@@ -129,12 +132,6 @@ footer .big-picture {
 
 .navbar-text{
   margin-bottom:5px;
-
-    @media (min-width: #{$large-width}) 
-  and (max-width:#{$very-large-width}) 
-  and (max-height: #{$large-height}) {
-    color:orange!important;      
-  }
 }
 .navbar-text:hover{
   color:white!important;
