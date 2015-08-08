@@ -43,6 +43,18 @@ footer .big-picture {
 
 /* Portfolio detail */
 
+.portfolio-description{
+  font-style: italic;
+}
+
+.label-spacing{
+  margin: 5px;
+}
+
+.label-line{
+  margin:10px;
+}
+
 .small-window-image{
   width:100%;
   margin-top:-130px;
@@ -62,7 +74,7 @@ footer .big-picture {
 .small-window{
   display:inline;
 
-  @include large{
+  @include medium{
     display:none;
   }
 
@@ -71,18 +83,10 @@ footer .big-picture {
   }
 }
 
-// .small-window-navbar{
-//   display:inline;
-
-//   @include large{
-//     display:none;
-//   }
-// }
-
 .medium-window{
   display:none;
 
-  @include large{
+  @include medium{
     display:inline;
   }
 
@@ -114,18 +118,18 @@ footer .big-picture {
 }
 
 .navbar-padding{
-  padding-top:1px;
+  padding-top:160px;
 
   @include large-width{
-    padding-top:40px;
+    padding-top:20px;
   }
 
-  @include large{
-    padding-top: 40px;
+  @include medium{
+    padding-top: 20px;
   }
 
   @include medium-width-short-height{
-    padding-top: 40px;  
+    padding-top: 20px;  
   }
 
 }
