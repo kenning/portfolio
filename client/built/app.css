@@ -23,8 +23,10 @@ body {
   margin: 10px; }
 
 .small-window-image {
-  width: 100%;
-  margin-top: -130px;
+  width: 120%;
+  margin-left: -180px;
+  margin-top: -120px;
+  right: 0px;
   z-index: -1; }
 
 .bg-wrapper {
@@ -74,13 +76,13 @@ body {
   padding-top: 160px; }
   @media (min-width: 992px) {
     .navbar-padding {
-      padding-top: 20px; } }
+      padding-top: 30px; } }
   @media (min-width: 768px) and (min-height: 600px) {
     .navbar-padding {
-      padding-top: 20px; } }
+      padding-top: 30px; } }
   @media (min-width: 768px) and (max-width: 992px) and (max-height: 600px) {
     .navbar-padding {
-      padding-top: 20px; } }
+      padding-top: 30px; } }
 
 .navbar-text {
   margin-bottom: 5px; }

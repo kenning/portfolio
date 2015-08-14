@@ -56,8 +56,10 @@ footer .big-picture {
 }
 
 .small-window-image{
-  width:100%;
-  margin-top:-130px;
+  width:120%;
+  margin-left:-180px;
+  margin-top:-120px;
+  right:0px;
   z-index:-1;
 }
 
@@ -121,15 +123,15 @@ footer .big-picture {
   padding-top:160px;
 
   @include large-width{
-    padding-top:20px;
+    padding-top:30px;
   }
 
   @include medium{
-    padding-top: 20px;
+    padding-top: 30px;
   }
 
   @include medium-width-short-height{
-    padding-top: 20px;  
+    padding-top: 30px;  
   }
 
 }
