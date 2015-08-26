@@ -4,28 +4,30 @@ block content
 
   div.container
     div.row
-      div(class="col-md-6 col-sm-12")
-        h1 &nbsp;
-        h1 Food Hyped
+      h1 &nbsp;
+      div(class="col-md-6 col-sm-12 white-rounded-edges")
+        h1.margin-top-none Food Hyped
         h4 Scrum Master, Full-Stack Engineer, Lead Mobile Engineer
         p.portfolio-description 
           |Restaurant aggregator that creates a “hype score” based on twitter, yelp, and instagram popularity
-        p • Created project architecture in Node.js and organized Git workflow as scrum master 
-        p • Designed and deployed React frontend utilizing Google Maps API
-        p • Ported to mobile in React Native
+        ul
+          li Created project architecture in Node.js 
+          li Organized Git workflow as scrum master 
+          li Designed and deployed React frontend utilizing Google Maps API
+          li Ported to mobile in React Native
         h4 Team size: 4 people
         .label-line
           span.label.label-default.label-spacing ReactJS
           span.label.label-default.label-spacing React Native
           span.label.label-default.label-spacing Web APIs
           span.label.label-default.label-spacing Node.js
-        .label-line
           span.label.label-default.label-spacing Express
           span.label.label-default.label-spacing HTML
           span.label.label-default.label-spacing CSS
           span.label.label-default.label-spacing Grunt
+          span.label.label-default.label-spacing Git
         a(class="btn btn-primary" href="http://foodhyped.nickmc.co") 
           |Visit Food Hyped 
           i(class="fa fa-chevron-right")
         br
-        img(class="small-window small-window-image" src="#{bg}")
+      img(class="small-window small-window-image" src="#{bg}")

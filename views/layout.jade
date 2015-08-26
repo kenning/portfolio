@@ -6,17 +6,18 @@ html
     link(rel='stylesheet', href='stylesheets/font-awesome.min.css')
     link(rel='stylesheet', href='stylesheets/app.css')
     script(src='javascripts/portfolio.js')
+    link(href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css')
   body
 
     // Small size window
 
-    div(class="bg-wrapper small-window")
+    div(class="#{mobileBgClass} bg-wrapper small-window")
 
       nav(class="navbar navbar-inverse navbar-fixed-top" role="navigation")
         div(class="container")
           div(class="navbar-header")
             a(class="navbar-brand navbar-left #{breadcrumbBrand}" href="/") 
-              |Nickmc.co
+              |nickmc.co
           span(class="navbar-right")
             a(href="/portfolio") 
               span(class="navbar-text #{breadcrumbPortfolio}")
@@ -54,13 +55,13 @@ html
 
     // Normal size window
 
-    div(style="background-image:url(#{bg});" class="bg-wrapper medium-window")
+    div(class="#{bgClass} bg-wrapper medium-window")
 
       nav(class="navbar navbar-inverse navbar-fixed-top" role="navigation")
         div(class="container")
           div(class="navbar-header")
-            a(class="navbar-brand navbar-left" href="#") 
-              |Nickmc.co
+            a(class="navbar-brand navbar-left #{breadcrumbBrand}" href="/") 
+              |nickmc.co
           span(class="navbar-right")
             a(href="/portfolio") 
               span(class="navbar-text #{breadcrumbPortfolio}")
@@ -93,7 +94,7 @@ html
         block content
 
         footer
-          div(class="row copyright #{bigPicture}")
+          div(class="row copyright #{footerClass}")
             div(class="col-lg-12")
-              p Copyright &copy; Nick McCormick 2015
+              p &copy; Nick McCormick 2015
 
